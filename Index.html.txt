@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PASTMASTER — Sri Lanka's Past Paper Library | Grade 5 Scholarship to G.C.E. A/L</title>
+  <meta name="description" content="PASTMASTER is Sri Lanka's most trusted platform for past examination papers, model papers and marking schemes — Grade 5 Scholarship, O/L and A/L. Search, preview and download free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a66c2'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>PM</text></svg>">
+<base target="_blank">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-eyebrow">🇱🇰 Trusted by 50,000+ Sri Lankan students</span>
+        <h1>Your Success Starts <span>With Practice</span></h1>
+        <p class="lead">Find, preview and download past examination papers, model papers and marking schemes — from Grade 5 Scholarship to G.C.E. A/L. All in one place, completely free.</p>
+        <form class="search-bar" id="heroSearch">
+          <input type="text" placeholder="Search past papers — e.g. Mathematics, O/L, 2023…" aria-label="Search past papers">
+          <button type="submit" class="btn btn-primary">🔍 Search</button>
+        </form>
+        <div class="hero-tags">
+          <span>Popular:</span>
+          <a href="papers.html?exam=ol">O/L Maths</a>
+          <a href="papers.html?exam=al">A/L Physics</a>
+          <a href="papers.html?q=Scholarship">Scholarship</a>
+          <a href="papers.html?q=Marking Scheme">Marking Schemes</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-card"><span class="hero-icon" style="background:#e8f2fd">📄</span>
+          <div><strong>G.C.E. O/L Mathematics 2023</strong><small>Past Paper · Sinhala Medium · 2.1 MB</small></div></div>
+        <div class="hero-card"><span class="hero-icon" style="background:#ecfdf5">📐</span>
+          <div><strong>Grade 5 Scholarship Model Paper</strong><small>Model Paper · English Medium · New upload</small></div></div>
+        <div class="hero-card"><span class="hero-icon" style="background:#fff7ed">✅</span>
+          <div><strong>A/L Biology Marking Scheme</strong><small>Official scheme · 2022 · Downloaded 11K times</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POPULAR CATEGORIES ============ -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Browse by Exam</span>
+          <h2>Popular Examination Categories</h2>
+          <p>Choose your examination to instantly filter the full library of papers.</p>
+        </div>
+        <a class="link-arrow" href="papers.html">View all papers →</a>
+      </div>
+      <div class="cat-grid" id="catGrid"><!-- rendered by JS --></div>
+    </div>
+  </section>
+
+  <!-- ============ LATEST PAPERS ============ -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Fresh Off the Press</span>
+          <h2>Latest Uploaded Papers</h2>
+          <p>The most recent additions to our growing collection.</p>
+        </div>
+        <a class="link-arrow" href="papers.html">Browse the library →</a>
+      </div>
+      <div class="paper-grid" id="latestPapers"><!-- rendered by JS --></div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-band" id="statsBand"><!-- rendered + animated by JS --></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED SUBJECTS ============ -->
+  <section class="section section-white" id="subjects">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Subject Spotlight</span>
+          <h2>Featured Subjects</h2>
+          <p>Jump straight into the subjects students search for the most.</p>
+        </div>
+      </div>
+      <div class="subj-grid" id="subjGrid"><!-- rendered by JS --></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA STRIP ============ -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="stats-band" style="grid-template-columns:1fr auto;align-items:center;padding:2.2rem 2.4rem">
+        <div>
+          <h2 style="color:#fff;font-size:1.5rem">Can't find a paper you need?</h2>
+          <p style="color:#dbeafe">Our team uploads new papers every week. Administrators can add papers instantly.</p>
+        </div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn" style="background:#fff;color:var(--blue)" href="admin.html">⚙️ Admin Dashboard</a>
+          <a class="btn btn-outline" style="border-color:#fff;color:#fff" href="papers.html">🔍 Search Library</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Papers Library — PASTMASTER</title>
+  <meta name="description" content="Search and filter Sri Lankan past papers by examination, year, medium and paper type. Free PDF downloads with previews.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+<base target="_blank">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Past Papers</div>
+      <h1>Past Papers Library</h1>
+      <p>Search, filter and download past papers, model papers and marking schemes.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:2.2rem">
+    <div class="container">
+
+      <!-- Filter panel -->
+      <div class="filter-panel">
+        <div class="filter-row">
+          <div class="field">
+            <label for="fSearch">Search</label>
+            <input type="text" id="fSearch" placeholder="Search by subject or title… e.g. Mathematics">
+          </div>
+          <div class="field">
+            <label for="fExam">Examination</label>
+            <select id="fExam"></select>
+          </div>
+          <div class="field">
+            <label for="fYear">Year</label>
+            <select id="fYear"></select>
+          </div>
+          <div class="field">
+            <label for="fMedium">Medium</label>
+            <select id="fMedium"></select>
+          </div>
+          <div class="field">
+            <label for="fType">Paper Type</label>
+            <select id="fType"></select>
+          </div>
+          <button class="btn btn-outline" id="fClear" type="button">Reset</button>
+        </div>
+      </div>
+
+      <div class="results-info" id="resultsInfo"></div>
+      <div class="paper-grid" id="paperGrid"></div>
+
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/papers.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Preview — PASTMASTER</title>
+  <meta name="description" content="Preview past examination papers online and download the PDF free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+<base target="_blank">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="papers.html">Past Papers</a> / Preview</div>
+      <h1 id="previewTitle">📄 Paper Preview</h1>
+      <p>Read the full paper below, then download the PDF to practice offline.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:2rem">
+    <div class="container preview-layout">
+
+      <!-- Embedded PDF viewer -->
+      <div class="viewer-box" id="viewerBox"><!-- iframe / fallback injected by JS --></div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="side-card">
+          <h3>📋 Paper Details</h3>
+          <div id="paperDetails"></div>
+        </div>
+        <div class="side-card">
+          <h3>⬇️ Download</h3>
+          <p style="color:var(--muted);font-size:.88rem;margin-bottom:1rem">Save this paper as a PDF and practice anywhere — even offline.</p>
+          <button class="btn btn-primary btn-block" id="dlBtn">⬇ Download PDF</button>
+          <br><br>
+          <a class="btn btn-outline btn-block" href="papers.html">← Back to Library</a>
+        </div>
+      </aside>
+
+    </div>
+
+    <div class="container" style="margin-top:2.5rem" id="relatedPapers"></div>
+  </section>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/preview.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — PASTMASTER</title>
+  <meta name="description" content="PASTMASTER admin dashboard — manage past papers, uploads, subjects and categories.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+<base target="_blank">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Admin</div>
+      <h1>⚙️ Admin Dashboard</h1>
+      <p>Manage past papers, PDF uploads, subjects and examination categories.</p>
+    </div>
+  </section>
+
+  <div class="container admin-layout">
+
+    <!-- Sidebar -->
+    <aside class="admin-side">
+      <div class="admin-brand">
+        <span class="logo-badge" style="width:36px;height:36px;font-size:.9rem">PM</span>
+        <div><strong>PASTMASTER</strong><br><small style="color:var(--muted)">Control Panel</small></div>
+      </div>
+      <ul class="admin-nav">
+        <button class="active" data-panel="panel-dash">📊 &nbsp;Dashboard</button>
+        <button data-panel="panel-papers">📚 &nbsp;Manage Papers</button>
+        <button data-panel="panel-add">➕ &nbsp;Add New Paper</button>
+        <button data-panel="panel-lists">🏷️ &nbsp;Subjects &amp; Categories</button>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="admin-main">
+
+      <!-- Dashboard -->
+      <section class="admin-panel active" id="panel-dash">
+        <h2>Dashboard Overview</h2>
+        <p>A live snapshot of the PASTMASTER paper library.</p>
+        <div class="admin-stats">
+          <div class="admin-stat"><div class="n" id="dashPapers">0</div><div class="t">Total Papers</div></div>
+          <div class="admin-stat"><div class="n" id="dashSubjects">0</div><div class="t">Subjects Covered</div></div>
+          <div class="admin-stat"><div class="n" id="dashCats">0</div><div class="t">Exam Categories</div></div>
+          <div class="admin-stat"><div class="n" id="dashDl">0</div><div class="t">Total Downloads</div></div>
+        </div>
+        <button class="btn btn-outline btn-sm" id="resetDataBtn">↺ Restore sample data</button>
+      </section>
+
+      <!-- Manage papers -->
+      <section class="admin-panel" id="panel-papers">
+        <div class="section-head" style="margin-bottom:1.2rem">
+          <div><h2>Manage Papers</h2><p>Edit details or remove papers from the library.</p></div>
+          <button class="btn btn-primary btn-sm" id="addPaperBtn">➕ Add Paper</button>
+        </div>
+        <div id="papersTableWrap"></div>
+      </section>
+
+      <!-- Add paper -->
+      <section class="admin-panel" id="panel-add">
+        <h2>Add New Past Paper</h2>
+        <p>Fill in the paper details and attach the PDF file.</p>
+        <button class="btn btn-primary" id="addPaperBtn2" onclick="document.getElementById('addPaperBtn').click()">➕ Open Add-Paper Form</button>
+      </section>
+
+      <!-- Lists -->
+      <section class="admin-panel" id="panel-lists">
+        <h2>Subjects &amp; Categories</h2>
+        <p>Add or remove subjects. Examination categories are built-in.</p>
+        <h3 style="margin:1rem 0 .8rem;font-size:1rem">Subjects</h3>
+        <div class="list-manager" id="subjectList"></div>
+        <div class="add-inline">
+          <input type="text" id="newSubject" placeholder="New subject name… e.g. Health Science">
+          <button class="btn btn-primary btn-sm" id="addSubjectBtn">＋ Add</button>
+        </div>
+        <h3 style="margin:1.8rem 0 .8rem;font-size:1rem">Examination Categories</h3>
+        <div class="list-manager" id="categoryList"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Add / Edit modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 id="modalTitle">Add New Past Paper</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      </div>
+      <form id="paperForm">
+        <div class="form-grid">
+          <div class="field full">
+            <label>Paper Title</label>
+            <input type="text" name="title" placeholder="e.g. Mathematics Past Paper" required>
+          </div>
+          <div class="field">
+            <label>Subject</label>
+            <select name="subject"></select>
+          </div>
+          <div class="field">
+            <label>Examination</label>
+            <select name="exam"></select>
+          </div>
+          <div class="field">
+            <label>Year</label>
+            <input type="number" name="year" min="2000" max="2030" required>
+          </div>
+          <div class="field">
+            <label>Medium</label>
+            <select name="medium"></select>
+          </div>
+          <div class="field full">
+            <label>Paper Type</label>
+            <select name="type"></select>
+          </div>
+          <div class="field full">
+            <label>PDF File</label>
+            <div class="file-drop" id="fileDrop">
+              <input type="file" accept="application/pdf,.pdf">
+              📁 <strong>Click to browse</strong> or drag &amp; drop the PDF here
+              <div class="file-name" id="fileName"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">💾 Save Paper</button>
+          <button type="button" class="btn btn-outline" id="modalClose2" onclick="document.getElementById('modalClose').click()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
+  <footer id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
